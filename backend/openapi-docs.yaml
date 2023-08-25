@@ -1,0 +1,41 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: My API
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: string
+          example: '123'
+        name:
+          type: string
+          example: John Doe
+        age:
+          type: number
+          example: 42
+      required:
+        - id
+        - name
+        - age
+  parameters: {}
+paths:
+  /users/{id}:
+    get:
+      parameters:
+        - schema:
+            type: string
+            minLength: 3
+            example: '1212121'
+          required: true
+          name: id
+          in: path
+      responses:
+        '200':
+          description: Retrieve the user
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
