@@ -63,9 +63,13 @@ app.openapi(route, (c) => {
 // The OpenAPI documentation will be available at /doc
 app.use('/doc/*',(async(c,next)=>{
   await next()
-  const obj = await c.res.json()
-  const yaml = YAML.dump(obj)
-  c.res = new Response(yaml ,c.res)
+
+  const yamlParam = c.req.query('yaml')
+  if (yamlParam != null ) {
+    const obj = await c.res.json()
+    const yaml = YAML.dump(obj)
+    c.res = new Response(yaml ,c.res)
+  }
 })satisfies MiddlewareHandler )
 
 app.doc('/doc', {
@@ -74,7 +78,10 @@ app.doc('/doc', {
     version: '1.0.0',
     title: 'My API',
   },
+  servers: [{
+    url:'http://127.0.0.1:8787',
+    description:'Local server'
+  }],
 })
-
 
 export default app
