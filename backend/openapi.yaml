@@ -2,6 +2,9 @@ openapi: 3.0.0
 info:
   version: 1.0.0
   title: My API
+servers:
+  - url: http://127.0.0.1:8787
+    description: Local server
 components:
   schemas:
     User:
@@ -39,3 +42,19 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/User'
+        '400':
+          description: Returns an error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: number
+                    example: 400
+                  message:
+                    type: string
+                    example: Bad Request
+                required:
+                  - code
+                  - message

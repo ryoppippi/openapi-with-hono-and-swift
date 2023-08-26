@@ -32,6 +32,15 @@ const UserSchema = z
   })
   .openapi('User')
 
+const ErrorSchema = z.object({
+  code: z.number().openapi({
+    example: 400,
+  }),
+  message: z.string().openapi({
+    example: 'Bad Request',
+  }),
+})
+
 const route = createRoute({
   method: 'get',
   path: '/users/{id}',
@@ -47,18 +56,38 @@ const route = createRoute({
       },
       description: 'Retrieve the user',
     },
+    400: {
+      content: {
+        'application/json': {
+          schema: ErrorSchema,
+        },
+      },
+      description: 'Returns an error',
+    },
   },
 })
 
 
 app.openapi(route, (c) => {
-  const { id } = c.req.valid('param')
-  return c.jsonT({
-    id,
-    age: 20,
-    name: 'Ultra-man',
-  })
-})
+    const { id } = c.req.valid('param')
+    return c.jsonT({
+      id,
+      age: 20,
+      name: 'Ultra-man',
+    })
+  },
+  (result, c) => {
+    if (!result.success) {
+      return c.jsonT(
+        {
+          code: 400,
+          message: 'Validation Error',
+        },
+        400
+      )
+    }
+  }
+)
 
 // The OpenAPI documentation will be available at /doc
 app.use('/doc/*',(async(c,next)=>{
