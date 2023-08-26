@@ -28,6 +28,9 @@ devDependencies:
   '@cloudflare/workers-types':
     specifier: ^4.20230821.0
     version: 4.20230821.0
+  prettier:
+    specifier: ^3.0.2
+    version: 3.0.2
   tsx:
     specifier: ^3.12.7
     version: 3.12.7
@@ -1051,6 +1054,12 @@ packages:
       simple-get: 4.0.1
       tar-fs: 2.1.1
       tunnel-agent: 0.6.0
+    dev: true
+
+  /prettier@3.0.2:
+    resolution: {integrity: sha512-o2YR9qtniXvwEZlOKbveKfDQVyqxbEIWn48Z8m3ZJjBjcCmUy3xZGIv+7AkaeuaTr6yPXJjwv07ZWlsWbEy1rQ==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: true
 
   /printable-characters@1.0.42:

@@ -2,6 +2,7 @@
   "scripts": {
     "dev": "wrangler dev src/index.ts",
     "gen": "tsx src/gen.ts",
+    "format": "prettier ./**/*.ts --write --use-tabs --single-quote --print-width 100",
     "deploy": "wrangler deploy --minify src/index.ts"
   },
   "dependencies": {
@@ -14,6 +15,7 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20230821.0",
+    "prettier": "^3.0.2",
     "tsx": "^3.12.7",
     "wrangler": "^3.5.1"
   }
