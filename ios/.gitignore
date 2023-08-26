@@ -129,9 +129,3 @@ xcuserdata/
 *.xcscmblueprint
 *.xccheckout
 
-## for vision pose
-*.lic
-*.xcframework
-
-GoogleService-Info.plist
-
