@@ -11,6 +11,18 @@ https://github.com/ryoppippi/openapi-with-hono-and-swift/assets/1560508/5c5889e5
 make setup
 ```
 
+## Generate Schema
+```sh
+ cd backend
+ pnpm run generate
+```
+You can use watch build so that you will get a tRPC-like experience between Swift <- -> TypeScript.
+
+```sh
+cd backend
+pnpm run generate --watch
+```
+
 ## Run
 
 ### backend
