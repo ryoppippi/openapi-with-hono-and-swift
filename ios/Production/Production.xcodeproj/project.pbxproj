@@ -7,19 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FEC98C182A99508D000D2274 /* ProductionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC98C172A99508D000D2274 /* ProductionApp.swift */; };
-		FEC98C1A2A99508D000D2274 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC98C192A99508D000D2274 /* ContentView.swift */; };
+		FEC98C1A2A99508D000D2274 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC98C192A99508D000D2274 /* App.swift */; };
 		FEC98C1C2A99508E000D2274 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEC98C1B2A99508E000D2274 /* Assets.xcassets */; };
 		FEC98C202A99508E000D2274 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEC98C1F2A99508E000D2274 /* Preview Assets.xcassets */; };
+		FEC98C292A9956EE000D2274 /* ProductionApp in Frameworks */ = {isa = PBXBuildFile; productRef = FEC98C282A9956EE000D2274 /* ProductionApp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FEC98C142A99508D000D2274 /* Production.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Production.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FEC98C172A99508D000D2274 /* ProductionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionApp.swift; sourceTree = "<group>"; };
-		FEC98C192A99508D000D2274 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FEC98C192A99508D000D2274 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		FEC98C1B2A99508E000D2274 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FEC98C1D2A99508E000D2274 /* Production.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Production.entitlements; sourceTree = "<group>"; };
 		FEC98C1F2A99508E000D2274 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FEC98C262A9955DB000D2274 /* App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = App.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +26,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEC98C292A9956EE000D2274 /* ProductionApp in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +38,7 @@
 			children = (
 				FEC98C162A99508D000D2274 /* Production */,
 				FEC98C152A99508D000D2274 /* Products */,
+				FEC98C272A9956EE000D2274 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,10 +53,9 @@
 		FEC98C162A99508D000D2274 /* Production */ = {
 			isa = PBXGroup;
 			children = (
-				FEC98C172A99508D000D2274 /* ProductionApp.swift */,
-				FEC98C192A99508D000D2274 /* ContentView.swift */,
+				FEC98C192A99508D000D2274 /* App.swift */,
 				FEC98C1B2A99508E000D2274 /* Assets.xcassets */,
-				FEC98C1D2A99508E000D2274 /* Production.entitlements */,
+				FEC98C262A9955DB000D2274 /* App.entitlements */,
 				FEC98C1E2A99508E000D2274 /* Preview Content */,
 			);
 			path = Production;
@@ -67,6 +67,13 @@
 				FEC98C1F2A99508E000D2274 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FEC98C272A9956EE000D2274 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +92,9 @@
 			dependencies = (
 			);
 			name = Production;
+			packageProductDependencies = (
+				FEC98C282A9956EE000D2274 /* ProductionApp */,
+			);
 			productName = Production;
 			productReference = FEC98C142A99508D000D2274 /* Production.app */;
 			productType = "com.apple.product-type.application";
@@ -139,8 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEC98C1A2A99508D000D2274 /* ContentView.swift in Sources */,
-				FEC98C182A99508D000D2274 /* ProductionApp.swift in Sources */,
+				FEC98C1A2A99508D000D2274 /* App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,7 +270,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Production/Production.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Production/App.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Production/Preview Content\"";
@@ -299,7 +308,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Production/Production.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Production/App.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Production/Preview Content\"";
@@ -354,6 +363,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FEC98C282A9956EE000D2274 /* ProductionApp */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ProductionApp;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FEC98C0C2A99508D000D2274 /* Project object */;
 }
