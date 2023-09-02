@@ -6,16 +6,13 @@ import type { MiddlewareHandler } from 'hono';
 const app = new OpenAPIHono();
 
 const ParamsSchema = z.object({
-	id: z
-		.string()
-		.min(3)
-		.openapi({
-			param: {
-				name: 'id',
-				in: 'path',
-			},
-			example: '1212121',
-		}),
+	id: z.string().min(3).openapi({
+		// param: {
+		// 	name: 'id',
+		// 	in: 'path',
+		// },
+		example: '1212121',
+	}),
 });
 
 const UserSchema = z
