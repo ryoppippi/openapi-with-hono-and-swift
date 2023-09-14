@@ -14,13 +14,13 @@ make setup
 ## Generate Schema
 ```sh
  cd backend
- pnpm run generate
+ bun run generate
 ```
 You can use watch build so that you will get a tRPC-like experience between Swift <- -> TypeScript.
 
 ```sh
 cd backend
-pnpm run generate --watch
+bun run generate --watch
 ```
 
 ## Run
@@ -28,7 +28,7 @@ pnpm run generate --watch
 ### backend
 ```sh
 cd backend
-pnpm run dev
+bun run dev
 ```
 
 ### ios
