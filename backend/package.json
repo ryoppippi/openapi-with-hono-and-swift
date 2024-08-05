@@ -7,7 +7,7 @@
     "prepare": "npx bunpare"
   },
   "dependencies": {
-    "@hono/zod-openapi": "^0.2.0",
+    "@hono/zod-openapi": "^0.15.0",
     "@types/js-yaml": "^4.0.5",
     "hono": "^3.5.4",
     "js-yaml": "^4.1.0",
