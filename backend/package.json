@@ -3,7 +3,8 @@
     "dev": "wrangler dev src/index.ts",
     "gen": "tsx src/gen.ts",
     "format": "prettier ./**/*.ts --write --use-tabs --single-quote --print-width 100",
-    "deploy": "wrangler deploy --minify src/index.ts"
+    "deploy": "wrangler deploy --minify src/index.ts",
+    "prepare": "npx bunpare"
   },
   "dependencies": {
     "@hono/zod-openapi": "^0.2.0",
