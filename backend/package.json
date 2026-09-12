@@ -19,6 +19,6 @@
     "@hono/swagger-ui": "^0.1.0",
     "prettier": "^3.0.2",
     "tsx": "^3.12.7",
-    "wrangler": "^3.5.1"
+    "wrangler": "^4.0.0"
   }
 }
